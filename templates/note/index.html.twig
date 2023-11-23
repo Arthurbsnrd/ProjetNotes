@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notes{% endblock %}
+
+{% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur la page des notes</h1>
+
+    {% for type, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert alert-{{ type }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+    <div>
+            {{ form_start(noteForm) }}
+            {{ form_row(noteForm.note, {'label': 'note.LabelTitle'|trans }) }}
+            {{ form_row(noteForm.subject, {'label': 'note.LabelSubject'|trans }) }}
+            {{ form_row(noteForm.submit, {'label': 'note.btnAddNote'|trans }) }}
+            {{ form_end(noteForm) }}    
+
+                <a href="{{ path('noteList') }}"> {{ "note.btnNoteList"|trans }} </a>
+    </div>
+{% endblock %}

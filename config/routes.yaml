@@ -3,3 +3,11 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+matiere:
+    path: /matiere
+    controller: App\Controller\MatiereController::index
+
+home:
+    path: /home
+    controller: App\Controller\HomeController::index
+    

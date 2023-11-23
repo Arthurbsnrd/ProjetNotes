@@ -1,0 +1,21 @@
+{# templates/matiere/details.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'matiere.btnMatiereList'|trans }}{% endblock %}
+
+{% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'matiere.details'|trans }}</h1>
+
+    {% if matiere is not null %}
+        <p>{{ 'matiere.LabelName'|trans }}: {{ matiere.nom }}</p>
+        <p>{{ 'matiere.LabelCoeff'|trans }}: {{ matiere.coefficient }}</p>
+        {# Add other specific details here #}
+    {% else %}
+        <p>{{ 'matiere.notExist'|trans }}</p>
+    {% endif %}
+{% endblock %}

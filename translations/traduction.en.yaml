@@ -1,0 +1,23 @@
+note:
+  LabelTitle: 'Note'
+  LabelSubject: 'Subject'
+  btnAddNote: 'Add Note'
+  btnNoteList: 'Note List'
+  sortBy: 'Sort by'
+  date: 'Date'
+  note: 'Note'
+  sortButton: 'Sort'
+  goToForm: 'Go to Form'
+  average: 'Average'
+  coeff: 'Coefficient'
+  noNotes: 'No notes available'
+  form_error: 'There was an error with your submission'
+  form_success: 'Your note has been successfully added'
+home:
+  title: 'Home'
+  welcome: 'Welcome to the note-taking application'
+matiere:
+  LabelName: 'Subject Name'
+  LabelCoeff: 'Subject Coefficient'
+  btnAddMatiere: 'Add Subject'
+  btnMatiereList: 'Subject List'

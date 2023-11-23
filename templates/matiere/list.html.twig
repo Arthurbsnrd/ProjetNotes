@@ -1,0 +1,28 @@
+{# templates/matiere/list.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'home.title'|trans }}{% endblock %}
+
+{% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <h1>{{ 'matiere.btnMatiereList'|trans }}</h1>
+
+    <a href="{{ path('matiere_new') }}">{{ 'matiere.btnAddMatiere'|trans }}</a>
+
+    {% if matieres is not empty %}
+        <ul>
+            {% for matiere in matieres %}
+                <li>
+                    {{ matiere.nom }} - {{ 'matiere.LabelCoeff'|trans }} {{ matiere.coefficient }}
+                    <a href="{{ path('matiere_show', {id: matiere.id}) }}">{{ 'matiere.details'|trans }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucune matière n'est disponible pour le moment.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,23 @@
+note:
+  LabelTitle: 'Note'
+  LabelSubject: 'Sujet'
+  btnAddNote: 'Ajouter une note'
+  btnNoteList: 'Liste des notes'
+  sortBy: 'Trier par'
+  date: 'Date'
+  note: 'Note'
+  sortButton: 'Trier'
+  goToForm: 'Aller au formulaire'
+  average: 'Moyenne'
+  coeff: 'Coefficient'
+  noNotes: 'Aucune note disponible'
+  form_error: 'Il y a eu une erreur avec votre soumission'
+  form_success: 'Votre note a été ajoutée avec succès'
+home:
+  title: 'Accueil'
+  welcome: 'Bienvenue sur l\'application de prise de notes'
+matiere:
+  LabelName: 'Nom de la matière'
+  LabelCoeff: 'Coefficient de la matière'
+  btnAddMatiere: 'Ajouter une matière'
+  btnMatiereList: 'Liste des matières'

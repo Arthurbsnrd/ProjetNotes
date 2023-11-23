@@ -1,0 +1,38 @@
+
+{# templates/note/add.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter une Note{% endblock %}
+
+{% block stylesheets %}
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <form method="post">
+        <div class="form-group">
+            <label for="sortingOption">{{ 'note.sortBy'|trans }}:</label>
+            <select name="sortingOption" id="sortingOption" class="form-control">
+                <option value="date">{{ 'note.date'|trans }}</option>
+                <option value="note">{{ 'note.note'|trans }}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">{{ 'note.sortButton'|trans }}</button>
+    </form>
+
+    {% if notes is not empty %}
+        <a href="{{ path('noteForm') }}" class="btn btn-primary">{{ 'note.goToForm'|trans }}</a>
+        <h1>{{ 'note.average'|trans }}: {{ average }}</h1>
+        {% for note in notes %}
+            <p>{{ 'note.note'|trans }}: {{ note.noteValue }}</p>
+            <p>{{ 'note.subject'|trans }}: {{ note.subject.name }}</p>
+            <p>{{ 'note.coeff'|trans }}: {{ note.subject.coeff }}</p>
+            <p>{{ 'note.date'|trans }}: {{ note.date | date('d/m/Y H:i:s') }}</p>
+            <hr/>
+        {% endfor %}
+    {% else %}
+        <p>{{ 'note.noNotes'|trans }}</p>
+        <a href="{{ path('noteForm') }}" class="btn btn-primary">{{ 'note.goToForm'|trans }}</a>
+    {% endif %}
+{% endblock %}
